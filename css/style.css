@@ -16,7 +16,7 @@ body {
 
 .loading-animation {
   height: 100vh;
-  font-size: 5rem;
+  font-size: 3rem;
   color: #0c0728;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -44,6 +44,11 @@ body {
   text-transform: capitalize;
 }
 
+header {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -51,60 +56,182 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   color: #0c0728;
-  margin: 2rem;
 }
 
 nav .logo {
   text-decoration: none;
   color: #0c0728;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  margin: 2rem 3rem;
 }
 
 nav .hamburger {
-  background-color: #a9cec2;
+  height: 40px;
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  position: relative;
+  margin: 2rem 3rem;
+  z-index: 1;
+  top: 17px;
+}
+
+nav .hamburger:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  cursor: pointer;
+  pointer-events: painted;
 }
 
 nav .hamburger .bar {
-  width: 40px;
-  height: 5px;
+  width: 35px;
+  height: 3px;
   background-color: #0c0728;
   border-radius: 20px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   position: relative;
 }
 
-nav .hamburger .bar:after, nav .hamburger .bar:before {
+nav .hamburger .bar::after, nav .hamburger .bar::before {
   content: " ";
   position: absolute;
-  height: 5px;
-  width: 40px;
-  background-color: #f2eeee;
+  height: 3px;
+  width: 35px;
+  background-color: #0c0728;
   border-radius: 20px;
 }
 
-nav .hamburger .bar:after {
-  bottom: 12px;
-  background-color: aqua;
+nav .hamburger .bar::after {
+  bottom: 10px;
 }
 
-nav .hamburger .bar:before {
-  top: 12px;
-  background-color: aqua;
+nav .hamburger .bar::before {
+  top: 10px;
 }
 
-nav #navbar {
-  display: none;
+nav .hamburger .toggled {
+  -webkit-transition: all 0.5s cubic-bezier(0.62, 0.04, 0.3, 1.56);
+  transition: all 0.5s cubic-bezier(0.62, 0.04, 0.3, 1.56);
+  -webkit-transform: rotate(315deg);
+          transform: rotate(315deg);
+}
+
+nav .hamburger .toggled::after, nav .hamburger .toggled::before {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  top: 0px;
+}
+
+nav .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  100% {
+    width: 30%;
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  100% {
+    width: 30%;
+    opacity: 1;
+  }
+}
+
+nav .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-transform: uppercase;
+  position: absolute;
+  height: 100vh;
+  width: 0vw;
+  background-color: #fff8f8;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  -webkit-transition: all 1s cubic-bezier(0.62, 0.04, 0.3, 1.56);
+  transition: all 1s cubic-bezier(0.62, 0.04, 0.3, 1.56);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+          box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
 }
 
-nav #navbar li {
+nav .navbar li {
   list-style: none;
+  text-align: center;
+  margin: 2rem;
 }
 
-nav #navbar li a {
+nav .navbar li a {
   text-decoration: none;
+  color: #0c0728;
+  position: relative;
+}
+
+nav .navbar li a:hover::before {
+  width: 100%;
+}
+
+nav .navbar li a::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 1.5rem;
+  width: 0;
+  height: 2px;
+  background: #0c0728;
+  -webkit-transition: width 0.5s ease;
+  transition: width 0.5s ease;
+}
+
+nav .show-nav {
+  width: 30vw;
+  -webkit-animation: slideIn 0.6s cubic-bezier(0.62, 0.04, 0.3, 1.56);
+          animation: slideIn 0.6s cubic-bezier(0.62, 0.04, 0.3, 1.56);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+main {
+  height: 100vh;
 }
 /*# sourceMappingURL=style.css.map */
