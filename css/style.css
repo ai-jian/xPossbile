@@ -126,8 +126,8 @@ nav .hamburger .bar::before {
 nav .hamburger .toggled {
   -webkit-transition: all 0.5s cubic-bezier(0.62, 0.04, 0.3, 1.56);
   transition: all 0.5s cubic-bezier(0.62, 0.04, 0.3, 1.56);
-  -webkit-transform: rotate(315deg);
-          transform: rotate(315deg);
+  -webkit-transform: rotate(227deg);
+          transform: rotate(227deg);
 }
 
 nav .hamburger .toggled::after, nav .hamburger .toggled::before {
@@ -184,6 +184,7 @@ nav .navbar {
           justify-content: center;
   text-transform: uppercase;
   position: absolute;
+  right: 0;
   height: 100vh;
   width: 0vw;
   background-color: #fff8f8;
