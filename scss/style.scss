@@ -20,7 +20,7 @@ $border-radius: 15px;
 $box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
 
 //page margin
-$page-margin: 2rem 3rem;
+$page-margin-mobile: 1rem 2rem;
 
 //functions
 @function color($color-name) {
@@ -105,72 +105,105 @@ body {
 // }
 
 //header
-header {
-  position: sticky;
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 //nav
 nav {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   color: color(sencondary);
 
   .logo {
     text-decoration: none;
     color: color(sencondary);
     font-size: 1.5rem;
-    margin: $page-margin;
+    margin: $page-margin-mobile;
   }
 
   //hamburger
   .hamburger {
-    height: 40px;
-    width: 50px;
+    height: 25px;
+    width: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-in-out;
     position: relative;
-    margin: $page-margin;
+    margin: $page-margin-mobile;
     z-index: 1;
-    top: 17px;
     &:hover {
       transform: scale(1.2);
       cursor: pointer;
       pointer-events: painted;
     }
+    // bar animation
+    @keyframes rotate1 {
+      0% {
+        top: 8px;
+      }
+      50% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        top: 0;
+        transform: rotate(-90deg);
+      }
+    }
+    @keyframes rotate2 {
+      0% {
+        bottom: 8px;
+      }
+      50% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        bottom: 0;
+        transform: rotate(-90deg);
+      }
+    }
 
     .bar {
-      width: 35px;
-      height: 3px;
+      width: 25px;
+      height: 2px;
       background-color: color(sencondary);
       border-radius: 20px;
-      transition: all 0.5s ease;
+      transition: all 0.5s ease-in-out;
       position: relative;
       &::after,
       &::before {
         content: " ";
         position: absolute;
-        height: 3px;
-        width: 35px;
+        width: 25px;
+        height: 2px;
         background-color: color(sencondary);
         border-radius: 20px;
       }
-      &::after {
-        bottom: 10px;
-      }
       &::before {
-        top: 10px;
+        top: 8px;
+        animation: rotate1 0.5s ease-out backwards;
+      }
+      &::after {
+        bottom: 8px;
+        animation: rotate2 0.5s ease-out backwards;
       }
     }
+
     .toggled {
-      transition: all 0.5s cubic-bezier(0.62, 0.04, 0.3, 1.56);
-      transform: rotate(315deg);
-      &::after,
+      transition: all 0.5s ease-in-out;
+      transform: rotate(45deg);
+
       &::before {
-        transform: rotate(90deg);
-        top: 0px;
+        animation: rotate1 0.5s ease-in-out forwards;
+      }
+      &::after {
+        animation: rotate2 0.5s ease-in-out forwards;
       }
     }
   }
@@ -180,6 +213,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    font-size: 1rem;
   }
   // nav background animation
   @keyframes slideIn {
@@ -190,7 +224,7 @@ nav {
     }
 
     100% {
-      width: 30%;
+      width: 40%;
 
       opacity: 1;
     }
@@ -200,22 +234,28 @@ nav {
     flex-direction: column;
     justify-content: center;
     text-transform: uppercase;
+    gap: 2rem;
     position: absolute;
+    overflow: hidden;
+    right: 0;
     height: 100vh;
-    width: 0vw;
+    width: 0;
     background-color: color(primary);
     border-top-left-radius: $border-radius;
     border-bottom-left-radius: $border-radius;
-    transition: all 1s cubic-bezier(0.62, 0.04, 0.3, 1.56);
+    animation: slideIn 0.5s ease-in-out backwards;
+
+    transition: all 0.5s ease-in-out;
     box-shadow: $box-shadow;
 
     li {
       list-style: none;
       text-align: center;
-      margin: 2rem;
+
       a {
         text-decoration: none;
         color: color(sencondary);
+
         position: relative;
 
         &:hover::before {
@@ -230,15 +270,15 @@ nav {
           width: 0;
           height: 2px;
           background: color(sencondary);
-          transition: width 0.5s ease;
+          transition: width 0.5s ease-in-out;
         }
       }
     }
   }
   .show-nav {
-    width: 30vw;
-    animation: slideIn 0.6s cubic-bezier(0.62, 0.04, 0.3, 1.56);
-    animation-fill-mode: forwards;
+    display: flex;
+    width: 40vw;
+    animation: slideIn 0.6s ease-in-out forwards;
   }
 }
 
@@ -246,4 +286,10 @@ nav {
 
 main {
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-family: $font-bodoni;
+  font-size: 1rem;
+  margin: $page-margin-mobile;
 }
