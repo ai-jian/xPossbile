@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,600;0,900;1,400;1,600;1,900&family=Jost:wght@100;400;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: #fff8f8;
+  background-size: 200px 200px;
+  background-position: center;
+  font-family: "Jost", sans-serif;
+}
+
+.loading-animation {
+  height: 100vh;
+  font-size: 5rem;
+  color: #0c0728;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loading-animation .x {
+  font-family: "Bodoni Moda", serif;
+  font-style: italic;
+  font-display: swap;
+  -webkit-transition: 0.5s font-variation-settings ease-in;
+  transition: 0.5s font-variation-settings ease-in;
+}
+
+.loading-animation .possible {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #0c0728;
+  margin: 2rem;
+}
+
+nav .logo {
+  text-decoration: none;
+  color: #0c0728;
+  font-size: 2rem;
+}
+
+nav .hamburger {
+  background-color: #a9cec2;
+}
+
+nav .hamburger .bar {
+  width: 40px;
+  height: 5px;
+  background-color: #0c0728;
+  border-radius: 20px;
+  position: relative;
+}
+
+nav .hamburger .bar:after, nav .hamburger .bar:before {
+  content: " ";
+  position: absolute;
+  height: 5px;
+  width: 40px;
+  background-color: #f2eeee;
+  border-radius: 20px;
+}
+
+nav .hamburger .bar:after {
+  bottom: 12px;
+  background-color: aqua;
+}
+
+nav .hamburger .bar:before {
+  top: 12px;
+  background-color: aqua;
+}
+
+nav #navbar {
+  display: none;
+  text-transform: uppercase;
+}
+
+nav #navbar li {
+  list-style: none;
+}
+
+nav #navbar li a {
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */
