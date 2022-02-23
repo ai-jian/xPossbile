@@ -4,14 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
+      type="text/javascript"
+    ></script> -->
+
     <link rel="stylesheet" href="css/style.css" />
     <title>Document</title>
   </head>
   <body>
-    <!-- landing -->
-    <div class="loading-animation">
-      <p class="x flip">x</p>
-      <p class="possible">possible</p>
+    <!-- preloader -->
+    <div id="loader-wrapper">
+      <!-- <div class="preload">
+        <p class="x flip">x</p>
+        <p class="possible">possible</p>
+      </div> -->
+      <!-- <div id="loader"></div> -->
+      <img src="src/image/loading.gif" alt="loading gif" />
+      <!-- <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div> -->
     </div>
 
     <!-- navbar -->
@@ -34,10 +45,43 @@
     </header>
 
     <main>
-      <h1>
-        We release the innocent soul. <br />
-        We design, polish, and make it beautiful.
-      </h1>
+      <section id="home">
+        <h1>
+          We release the innocent soul. <br />
+          We design, polish, and make it beautiful.
+        </h1>
+      </section>
+
+      <section id="team">
+        <div class="team-intro">We focus on our client's needs.</div>
+        <div class="team-intro">We challenge design rules and aesthetics.</div>
+        <div class="team-intro">
+          We are a visionary team creates delightful and pragmatic things
+          efficiently.
+        </div>
+        <div class="profile">
+          <div class="pic"></div>
+          <h3 class="name">Ai Jian</h3>
+          <p class="title">Creative Developer</p>
+          <p class="description">
+            Ai is a frontend web developer who has been always curious about new
+            technologies, loves all things aesthetically pleasing, and makes
+            visuals come to life and react on screen.
+          </p>
+        </div>
+        <div class="profile">
+          <div class="pic"></div>
+          <h3 class="name">Yuchen Yang</h3>
+          <p class="title">Talented graphic designer</p>
+          <p class="description">
+            Yuchen is a professional practitioner of art and design. She gathers
+            idea from her daily sketches and observation, develops concepts,
+            creating graphic design from her small laptop. Always willing and
+            has ability to work independently as well as part of a team. She is
+            never tired of taking challenges.
+          </p>
+        </div>
+      </section>
     </main>
 
     <script src="main.js"></script>
