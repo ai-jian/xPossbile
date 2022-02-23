@@ -1,5 +1,5 @@
 // preloader
-setTimeout(function () { document.body.classList.add("loaded"); }, 3370);
+setTimeout(function () { document.body.classList.add("loaded"); }, 5000);
 
 // hamburger
 const toggleBtn = document.querySelector('.hamburger')

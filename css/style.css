@@ -409,13 +409,17 @@ main section {
       -ms-flex-align: center;
           align-items: center;
   font-family: "Bodoni Moda", serif;
-  font-size: 1rem;
 }
 
 main #home {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  font-size: 2rem;
+}
+
+main #home h1 {
+  padding-bottom: 4rem;
 }
 
 main #team .team-intro {
