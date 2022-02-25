@@ -312,6 +312,7 @@ nav .show-nav {
 
 #team .team-intro {
   min-height: 100vh;
+  min-width: 100%;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
