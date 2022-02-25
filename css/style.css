@@ -50,6 +50,8 @@
   top: 0;
   width: 100%;
   background-color: #fff8f8;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+          box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
 }
 
 nav {
@@ -275,7 +277,7 @@ nav .navbar {
 nav .navbar li {
   list-style: none;
   text-align: center;
-  height: 1.5rem;
+  height: 1.7rem;
   overflow: hidden;
 }
 
