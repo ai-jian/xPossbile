@@ -41,7 +41,7 @@ nav .hamburger {
   transition: all 0.5s ease-in-out;
   position: relative;
   margin: 1rem 2rem;
-  z-index: 1;
+  z-index: 10;
 }
 
 nav .hamburger:hover {
@@ -219,6 +219,7 @@ nav .navbar {
   border-bottom-left-radius: 15px;
   -webkit-animation: slideIn 0.5s ease-in-out backwards;
           animation: slideIn 0.5s ease-in-out backwards;
+  z-index: 1;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   -webkit-box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
@@ -298,8 +299,8 @@ nav .show-nav {
 
 .ticker-container .ticker-item, .ticker-container .ticker-item1 {
   display: inline-block;
-  padding: 0.5rem;
-  font-size: 1rem;
+  padding: 0.2rem;
+  font-size: 0.8rem;
   color: #0c0728;
 }
 
