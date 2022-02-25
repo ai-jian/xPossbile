@@ -3,6 +3,7 @@
   position: fixed;
   top: 0;
   width: 100%;
+  background-color: color(primary);
 }
 
 //nav
@@ -11,11 +12,10 @@ nav {
   justify-content: space-between;
   align-items: center;
 
-  color: color(sencondary);
-
   .logo {
     text-decoration: none;
     color: color(sencondary);
+    // color: color(primary);
     font-size: 1.5rem;
     margin: $page-margin-mobile;
   }
@@ -59,6 +59,7 @@ nav {
       width: 25px;
       height: 2px;
       background-color: color(sencondary);
+      //   background-color: color(primary);
       border-radius: 20px;
       transition: all 0.5s ease-in-out;
       position: relative;
@@ -69,6 +70,8 @@ nav {
         width: 25px;
         height: 2px;
         background-color: color(sencondary);
+        // background-color: color(primary);
+
         border-radius: 20px;
       }
       &::before {

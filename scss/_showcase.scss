@@ -1,0 +1,26 @@
+#showcase {
+  display: flex;
+  flex-direction: row;
+  padding: $page-margin-mobile;
+  overflow: scroll;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  .project-wrapper {
+    height: 70vh;
+    min-width: 70vw;
+    background-color: pink;
+    border-radius: $border-radius;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-transform: capitalize;
+    padding: $page-margin-mobile;
+    .title {
+      text-transform: uppercase;
+    }
+    .discription {
+      padding-top: $page-margin-mobile;
+    }
+  }
+}

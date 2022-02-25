@@ -1,8 +1,55 @@
 @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,600;0,900;1,400;1,600;1,900&family=Jost:wght@100;400;900&display=swap");
+#showcase {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 1rem;
+  overflow: scroll;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1rem;
+}
+
+#showcase .project-wrapper {
+  height: 70vh;
+  min-width: 70vw;
+  background-color: pink;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-transform: capitalize;
+  padding: 1rem;
+}
+
+#showcase .project-wrapper .title {
+  text-transform: uppercase;
+}
+
+#showcase .project-wrapper .discription {
+  padding-top: 1rem;
+}
+
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
+  background-color: #fff8f8;
 }
 
 nav {
@@ -15,14 +62,13 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #0c0728;
 }
 
 nav .logo {
   text-decoration: none;
   color: #0c0728;
   font-size: 1.5rem;
-  margin: 1rem 2rem;
+  margin: 1rem;
 }
 
 nav .hamburger {
@@ -40,7 +86,7 @@ nav .hamburger {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   position: relative;
-  margin: 1rem 2rem;
+  margin: 1rem;
   z-index: 10;
 }
 
@@ -316,7 +362,7 @@ nav .show-nav {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 2rem;
+  font-size: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -330,7 +376,7 @@ nav .show-nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
+  text-align: left;
   background-color: #0c0728;
   color: #fff8f8;
 }
@@ -350,7 +396,7 @@ nav .show-nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 1rem 2rem;
+  padding: 1rem;
 }
 
 #team .profile .pic {
@@ -497,8 +543,6 @@ main {
 }
 
 main section {
-  min-height: 100vh;
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -512,17 +556,29 @@ main section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "Bodoni Moda", serif;
 }
 
 main #home {
+  font-family: "Bodoni Moda", serif;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  font-size: 2rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  min-height: 100vh;
+  min-width: 100%;
+  padding: 1rem;
 }
 
 main #home h1 {
-  padding-bottom: 4rem;
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+
+main #home hr {
+  height: 2px;
+  width: 100%;
+  color: #0c0728;
+  background-color: #0c0728;
 }
 /*# sourceMappingURL=style.css.map */

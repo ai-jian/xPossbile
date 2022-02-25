@@ -20,13 +20,14 @@ $border-radius: 15px;
 $box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
 
 //page margin
-$page-margin-mobile: 1rem 2rem;
+$page-margin-mobile: 1rem;
 
 //functions
 @function color($color-name) {
   @return map-get($colors, $color-name);
 }
 
+@import "showcase";
 @import "header";
 @import "team";
 
@@ -251,19 +252,30 @@ main {
   min-height: 100vh;
   font-family: $font-jost;
   section {
-    min-height: 100vh;
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: $font-bodoni;
   }
+  // .home-container {
+  //   height: 100vh;
+  // }
   #home {
+    font-family: $font-bodoni;
     justify-content: flex-end;
-    font-size: 2rem;
+    align-self: flex-end;
+    min-height: 100vh;
+    min-width: 100%;
+    padding: $page-margin-mobile;
     h1 {
-      padding-bottom: 4rem;
+      font-size: 2rem;
+      padding-bottom: 2rem;
+    }
+    hr {
+      height: 2px;
+      width: 100%;
+      color: #0c0728;
+      background-color: #0c0728;
     }
   }
 }
