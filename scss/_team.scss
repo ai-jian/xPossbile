@@ -1,0 +1,29 @@
+#team {
+  .team-intro {
+    min-height: 100vh;
+    width: fit-content;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: color(sencondary);
+    color: color(primary);
+  }
+  .profile {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $page-margin-mobile;
+    .pic {
+      margin: 2rem 0;
+      height: 300px;
+      width: 300px;
+      border-radius: 50%;
+      background-color: color(tertiary);
+    }
+  }
+}
