@@ -1,4 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,600;0,900;1,400;1,600;1,900&family=Jost:wght@100;400;900&display=swap");
+//font
+@font-face {
+  font-family: "New Xpossible Font";
+  src: url("src/fonts/NewXpossibleFontRegular.eot");
+  src: url("src/fonts/NewXpossibleFontRegular.eot?#iefix")
+      format("embedded-opentype"),
+    url("src/fonts/NewXpossibleFontRegular.woff2") format("woff2"),
+    url("src/fonts/NewXpossibleFontRegular.woff") format("woff"),
+    url("src/fonts/NewXpossibleFontRegular.ttf") format("truetype"),
+    url("src/fonts/NewXpossibleFontRegular.svg#NewXpossibleFontRegular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 //colors
 $colors: (
@@ -21,6 +36,20 @@ $box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
 
 //page margin
 $page-margin-mobile: 1rem;
+
+//responsive
+$tablet: 768px;
+$desktop: 1200px;
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
 
 //functions
 @function color($color-name) {
@@ -189,7 +218,6 @@ img {
   .x {
     font-family: "Bodoni Moda", serif;
     font-style: italic;
-    font-display: swap;
     // position: relative;
     // right: 10%;
   }
@@ -251,31 +279,37 @@ img {
 main {
   min-height: 100vh;
   font-family: $font-jost;
-  section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+
   // .home-container {
   //   height: 100vh;
   // }
   #home {
-    font-family: $font-bodoni;
-    justify-content: flex-end;
-    align-self: flex-end;
+    font-family: "New Xpossible Font", sans-serif;
+    position: relative;
     min-height: 100vh;
-    min-width: 100%;
-    padding: $page-margin-mobile;
-    h1 {
-      font-size: 2rem;
-      padding-bottom: 2rem;
-    }
-    hr {
-      height: 2px;
+    width: 100%;
+
+    .manifesto {
+      position: absolute;
+      bottom: 7%;
       width: 100%;
-      color: #0c0728;
-      background-color: #0c0728;
+      h1 {
+        font-family: "New Xpossible Font", sans-serif;
+        margin: $page-margin-mobile;
+        font-size: 2rem;
+        // text-transform: uppercase;
+      }
+      hr {
+        height: 2px;
+        width: 100%;
+        color: #0c0728;
+        background-color: #0c0728;
+      }
+      @include tablet {
+        h1 {
+          font-size: 5rem;
+        }
+      }
     }
   }
 }
