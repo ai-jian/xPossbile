@@ -1,38 +1,18 @@
 #showcase {
-  min-height: 100vh;
-  // display: flex;
-  // flex-direction: row;
-  // margin: $page-margin-mobile;
-  // justify-content: flex-start;
-  // align-items: flex-start;
+  min-height: fit-content;
   gap: 1rem;
-  //   .project-wrapper {
-  //     height: 70vh;
-  //     min-width: 70vw;
-  //     background-color: pink;
-  //     border-radius: $border-radius;
-  //     display: flex;
-  //     flex-direction: column;
-  //     justify-content: flex-end;
-  //     text-transform: capitalize;
-  //     padding: $page-margin-mobile;
-  //     .title {
-  //       text-transform: uppercase;
-  //     }
-  //     .discription {
-  //       padding-top: $page-margin-mobile;
-  //     }
-  //   }
   .project-wrapper {
     height: 90vh;
-    background-color: rgb(136, 220, 220);
+    background-color: color(primary);
+    color: color(sencondary);
     .pic {
-      height: 60%;
+      height: 50%;
       width: 100%;
       background-color: rgb(250, 180, 159);
     }
     .title-wrapper {
-      background-color: yellow;
+      height: 15%;
+      background-color: color(primary-darken);
       padding: $page-margin-mobile;
       border-bottom: 1px solid color(sencondary);
       .title {
@@ -41,7 +21,28 @@
       }
     }
     .description-wrapper {
+      height: 35%;
       padding: $page-margin-mobile;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      // align-items: center;
+      .read-more {
+        text-decoration: none;
+        text-transform: capitalize;
+        color: color(sencondary);
+      }
+    }
+    @include tablet {
+      display: flex;
+      height: 80vh;
+      .left-side {
+        width: 50%;
+        height: 100%;
+      }
+      .right-side {
+        width: 50%;
+      }
     }
   }
 }

@@ -9,23 +9,27 @@
 }
 
 #showcase {
-  min-height: 100vh;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   gap: 1rem;
 }
 
 #showcase .project-wrapper {
   height: 90vh;
-  background-color: #88dcdc;
+  background-color: #fff8f8;
+  color: #0c0728;
 }
 
 #showcase .project-wrapper .pic {
-  height: 60%;
+  height: 50%;
   width: 100%;
   background-color: #fab49f;
 }
 
 #showcase .project-wrapper .title-wrapper {
-  background-color: yellow;
+  height: 15%;
+  background-color: #fbdbdc;
   padding: 1rem;
   border-bottom: 1px solid #0c0728;
 }
@@ -36,7 +40,40 @@
 }
 
 #showcase .project-wrapper .description-wrapper {
+  height: 35%;
   padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#showcase .project-wrapper .description-wrapper .read-more {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #0c0728;
+}
+
+@media (min-width: 768px) {
+  #showcase .project-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 80vh;
+  }
+  #showcase .project-wrapper .left-side {
+    width: 50%;
+    height: 100%;
+  }
+  #showcase .project-wrapper .right-side {
+    width: 50%;
+  }
 }
 
 .sticky {
@@ -62,13 +99,12 @@ nav {
 }
 
 nav .logo {
-  text-decoration: none;
   color: #0c0728;
   margin: 1rem;
 }
 
 nav .logo img {
-  height: 17px;
+  height: 15px;
 }
 
 nav .hamburger {
