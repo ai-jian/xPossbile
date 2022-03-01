@@ -9,56 +9,41 @@
 }
 
 #showcase {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  padding: 1rem;
-  overflow: scroll;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  min-height: 100vh;
   gap: 1rem;
 }
 
 #showcase .project-wrapper {
-  height: 70vh;
-  min-width: 70vw;
-  background-color: pink;
-  border-radius: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  text-transform: capitalize;
+  height: 90vh;
+  background-color: #88dcdc;
+}
+
+#showcase .project-wrapper .pic {
+  height: 60%;
+  width: 100%;
+  background-color: #fab49f;
+}
+
+#showcase .project-wrapper .title-wrapper {
+  background-color: yellow;
   padding: 1rem;
+  border-bottom: 1px solid #0c0728;
 }
 
-#showcase .project-wrapper .title {
-  text-transform: uppercase;
+#showcase .project-wrapper .title-wrapper .title {
+  text-transform: capitalize;
+  font-weight: bold;
 }
 
-#showcase .project-wrapper .discription {
-  padding-top: 1rem;
+#showcase .project-wrapper .description-wrapper {
+  padding: 1rem;
 }
 
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #fff8f8;
+  background-color: rgba(255, 248, 248, 0.9);
   -webkit-box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
           box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
   z-index: 1;
@@ -79,8 +64,11 @@ nav {
 nav .logo {
   text-decoration: none;
   color: #0c0728;
-  font-size: 1.5rem;
   margin: 1rem;
+}
+
+nav .logo img {
+  height: 17px;
 }
 
 nav .hamburger {

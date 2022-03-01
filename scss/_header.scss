@@ -3,7 +3,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: color(primary);
+  background-color: rgba($color: #fff8f8, $alpha: 0.9);
   box-shadow: $box-shadow;
   z-index: 1;
 }
@@ -18,8 +18,11 @@ nav {
     text-decoration: none;
     color: color(sencondary);
     // color: color(primary);
-    font-size: 1.5rem;
     margin: $page-margin-mobile;
+    img {
+      height: 17px;
+      // width: 100%;
+    }
   }
 
   //hamburger
