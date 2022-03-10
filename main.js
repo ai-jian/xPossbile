@@ -16,7 +16,7 @@ toggleBtn.addEventListener('click', function () {
 
 gsap.set('.ticker-wrapper', { xPercent: -50 })
 const boxWidth = '540',
-    totalWidth = boxWidth * 4,  //  * n of boxes
+    totalWidth = boxWidth * 5,  //  * n of boxes
     ticker = document.querySelectorAll("#ticker .box"),
     dirFromLeft = "+=" + totalWidth,
     dirFromRight = "-=" + totalWidth;

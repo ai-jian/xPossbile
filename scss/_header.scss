@@ -192,13 +192,13 @@ nav {
   .box {
     position: absolute;
     width: fit-content;
-    height: fit-content;
+    // height: fit-content;
     background: color(primary);
     line-height: 2.5rem;
     text-align: center;
   }
   .boxes {
     position: relative;
-    left: -1000px;
+    left: -50vw;
   }
 }

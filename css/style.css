@@ -434,9 +434,6 @@ nav .show-nav {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
   background: #fff8f8;
   line-height: 2.5rem;
   text-align: center;
@@ -444,7 +441,7 @@ nav .show-nav {
 
 .ticker-wrapper .boxes {
   position: relative;
-  left: -1000px;
+  left: -50vw;
 }
 
 #team .team-intro {
