@@ -8,6 +8,48 @@
   font-display: swap;
 }
 
+#home {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+
+#home .manifesto {
+  position: absolute;
+  bottom: 7%;
+  width: 100%;
+}
+
+#home .manifesto h1 {
+  font-family: "New Xpossible Font", sans-serif;
+  margin: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+#home .manifesto h1 span {
+  display: block;
+}
+
+#home .manifesto hr {
+  height: 2px;
+  width: 100%;
+  color: #0c0728;
+  background-color: #0c0728;
+}
+
+@media (min-width: 768px) {
+  #home .manifesto h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  #home .manifesto h1 {
+    font-size: 6rem;
+  }
+}
+
 #showcase {
   min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
@@ -375,50 +417,34 @@ nav .show-nav {
           animation: slideIn 0.6s ease-in-out;
 }
 
-@-webkit-keyframes ticker {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: -100%;
-  }
-}
-
-@keyframes ticker {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: -100%;
-  }
-}
-
-.ticker-container {
-  width: 100%;
+.ticker-wrapper {
+  position: fixed;
+  width: 100vw;
+  height: 2.5rem;
+  left: 50%;
+  /*   top:40%; */
+  border-top: 1px solid #0c0728;
+  border-bottom: 1px solid #0c0728;
+  background: #fff8f8;
   overflow: hidden;
-  background-color: transparent;
-  border-top: 2px solid #0c0728;
-  border-bottom: 2px solid #0c0728;
 }
 
-.ticker-container .ticker {
-  display: inline-block;
-  white-space: nowrap;
-  padding-right: 100%;
+.ticker-wrapper .box {
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: #fff8f8;
+  line-height: 2.5rem;
+  text-align: center;
+}
+
+.ticker-wrapper .boxes {
   position: relative;
-  -webkit-animation: ticker 15s linear infinite both;
-          animation: ticker 15s linear infinite both;
-}
-
-.ticker-container .ticker-item, .ticker-container .ticker-item1 {
-  display: inline-block;
-  padding: 0.2rem;
-  font-size: 0.8rem;
-  color: #0c0728;
-}
-
-.ticker-container .ticker-item1 {
-  width: 50%;
+  left: -1000px;
 }
 
 #team .team-intro {
@@ -604,37 +630,5 @@ img {
 main {
   min-height: 100vh;
   font-family: "Jost", sans-serif;
-}
-
-main #home {
-  position: relative;
-  min-height: 100vh;
-  width: 100%;
-}
-
-main #home .manifesto {
-  position: absolute;
-  bottom: 7%;
-  width: 100%;
-}
-
-main #home .manifesto h1 {
-  font-family: "New Xpossible Font", sans-serif;
-  margin: 1rem;
-  font-size: 2rem;
-  text-transform: uppercase;
-}
-
-main #home .manifesto hr {
-  height: 2px;
-  width: 100%;
-  color: #0c0728;
-  background-color: #0c0728;
-}
-
-@media (min-width: 768px) {
-  main #home .manifesto h1 {
-    font-size: 5rem;
-  }
 }
 /*# sourceMappingURL=style.css.map */

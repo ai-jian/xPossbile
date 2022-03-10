@@ -15,7 +15,7 @@ nav {
   align-items: center;
 
   .logo {
-    color: color(sencondary);
+    color: color(secondary);
     margin: $page-margin-mobile;
     img {
       height: 15px;
@@ -60,7 +60,7 @@ nav {
     .bar {
       width: 25px;
       height: 2px;
-      background-color: color(sencondary);
+      background-color: color(secondary);
       //   background-color: color(primary);
       border-radius: 20px;
       transition: all 0.5s ease-in-out;
@@ -71,7 +71,7 @@ nav {
         position: absolute;
         width: 25px;
         height: 2px;
-        background-color: color(sencondary);
+        background-color: color(secondary);
         // background-color: color(primary);
 
         border-radius: 20px;
@@ -152,7 +152,7 @@ nav {
       overflow: hidden;
       a {
         text-decoration: none;
-        color: color(sencondary);
+        color: color(secondary);
         position: relative;
         &:hover::before {
           width: 100%;
@@ -165,7 +165,7 @@ nav {
           top: $fontsize-nav;
           width: 0;
           height: 2px;
-          background: color(sencondary);
+          background: color(secondary);
           transition: all 0.5s ease-in-out;
         }
       }
@@ -179,104 +179,26 @@ nav {
 }
 
 //ticker tape
-
-// .tickerContainer {
-// }
-// .ticker {
-//   height: 25px;
-//   width: 100vw;
-//   min-width: 1300px;
-//   background-color: #0d0d0d;
-//   color: white;
-//   text-align: center;
-//   overflow: hidden;
-//   white-space: nowrap;
-//   position: relative;
-// }
-
-// .ticker div {
-//   display: inline-block;
-//   width: 200%;
-//   height: 25px;
-//   position: absolute;
-//   overflow: hidden;
-//   animation: ticker 10s linear infinite;
-// }
-// .ticker-item {
-//   float: left;
-//   width: 50%;
-// }
-// @keyframes ticker {
-//   0% {
-//     transform: translateX(0%);
-//   }
-//   100% {
-//     transform: translateX(-100%);
-//   }
-// }
-@keyframes ticker {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: -100%;
-  }
-}
-
-// @keyframes ticker {
-//   0% {
-//     -webkit-transform: translate3d(0, 0, 0);
-//     transform: translate3d(0, 0, 0);
-//     visibility: visible;
-//   }
-//   25% {
-//     -webkit-transform: translate3d(-100%, 0, 0);
-//     transform: translate3d(-100%, 0, 0);
-//   }
-//   50% {
-//     -webkit-transform: translate3d(0, 0, 0);
-//     transform: translate3d(0, 0, 0);
-//     visibility: visible;
-//   }
-
-//   100% {
-//     -webkit-transform: translate3d(-100%, 0, 0);
-//     transform: translate3d(-100%, 0, 0);
-//   }
-// }
-
-.ticker-container {
-  width: 100%;
+.ticker-wrapper {
+  position: fixed;
+  width: 100vw;
+  height: 2.5rem;
+  left: 50%;
+  /*   top:40%; */
+  border-top: 1px solid color(secondary);
+  border-bottom: 1px solid color(secondary);
+  background: color(primary);
   overflow: hidden;
-  background-color: transparent;
-  border-top: 2px solid color(sencondary);
-  border-bottom: 2px solid color(sencondary);
-
-  //   padding-left: 100%;
-  //   box-sizing: content-box;
-
-  .ticker {
-    display: inline-block;
-    white-space: nowrap;
-    padding-right: 100%;
-    // box-sizing: content-box;
+  .box {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    background: color(primary);
+    line-height: 2.5rem;
+    text-align: center;
+  }
+  .boxes {
     position: relative;
-    animation: ticker 15s linear infinite both;
-
-    &-item,
-    &-item1 {
-      display: inline-block;
-      padding: 0.2rem;
-      font-size: 0.8rem;
-      color: color(sencondary);
-
-      //   transform: translateX(0%);
-    }
-    &-item1 {
-      //   transform: translateX(100%);
-      //   animation-delay: 2s;
-      //   float: left;
-      width: 50%;
-    }
+    left: -1000px;
   }
 }

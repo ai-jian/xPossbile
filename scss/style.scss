@@ -18,7 +18,7 @@
 //colors
 $colors: (
   primary: #fff8f8,
-  sencondary: #0c0728,
+  secondary: #0c0728,
   tertiary: #f2eeee,
   primary-darken: #fbdbdc,
 );
@@ -57,7 +57,7 @@ $desktop: 1200px;
 @function color($color-name) {
   @return map-get($colors, $color-name);
 }
-
+@import "landing";
 @import "showcase";
 @import "header";
 @import "team";
@@ -209,7 +209,7 @@ img {
   width: 100%;
   height: 100vh;
   font-size: 3rem;
-  color: color(sencondary);
+  color: color(secondary);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -285,32 +285,4 @@ main {
   // .home-container {
   //   height: 100vh;
   // }
-  #home {
-    position: relative;
-    min-height: 100vh;
-    width: 100%;
-
-    .manifesto {
-      position: absolute;
-      bottom: 7%;
-      width: 100%;
-      h1 {
-        font-family: "New Xpossible Font", sans-serif;
-        margin: $page-margin-mobile;
-        font-size: 2rem;
-        text-transform: uppercase;
-      }
-      hr {
-        height: 2px;
-        width: 100%;
-        color: #0c0728;
-        background-color: #0c0728;
-      }
-      @include tablet {
-        h1 {
-          font-size: 5rem;
-        }
-      }
-    }
-  }
 }
