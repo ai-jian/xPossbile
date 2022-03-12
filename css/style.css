@@ -50,33 +50,18 @@
   }
 }
 
-#showcase .fixed-box {
-  position: fixed;
-  top: 0;
-  left: 50%;
+#showcase .project-wrapper {
+  color: #0c0728;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+}
+
+#showcase .project-wrapper .left-side {
   height: 100vh;
-  width: 50%;
-  border-left: 2px solid #0c0728;
-  z-index: 5;
-}
-
-#showcase .fixed-box .title-box {
-  top: 0;
-  left: 50%;
-  height: 30vh;
-  width: 100%;
-  background-color: rgba(250, 180, 159, 0.762);
-  padding: 1rem;
-  border-bottom: 2px solid #0c0728;
-}
-
-#showcase .fixed-box .grid-box {
-  height: 70vh;
-}
-
-#showcase .info-wrapper {
-  min-height: 100vh;
-  gap: 1rem;
+  width: auto;
+  background-color: #fab49f;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,51 +69,68 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: relative;
-  top: 0%;
-  z-index: -1;
-  overflow: hidden;
 }
 
-#showcase .project-wrapper {
-  height: 90vh;
-  background-color: #fff8f8;
-  color: #0c0728;
+#showcase .project-wrapper .left-side img {
+  margin: 1rem;
 }
 
-#showcase .project-wrapper .pic {
-  height: 50%;
-  width: 100%;
-  background-color: #fab49f;
-  overflow: hidden;
-}
-
-#showcase .project-wrapper .pic img {
+#showcase .project-wrapper .right-side {
+  width: 40%;
   min-height: 100%;
-  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-left: 2px solid black;
 }
 
-#showcase .project-wrapper .title-wrapper .title {
+#showcase .project-wrapper .right-side .title-box {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0%;
+  background-color: rgba(249, 190, 190, 0.776);
+  border-bottom: 2px solid black;
+  height: 30vh;
+  z-index: 9;
+}
+
+#showcase .project-wrapper .descriptions {
+  min-height: 100%;
+  width: 40%;
+  right: 0%;
+  top: 0%;
+  position: absolute;
+}
+
+#showcase .project-wrapper .descriptions .description-wrapper {
+  height: 80vh;
+  background-color: aqua;
+  margin: 1rem;
+}
+
+#showcase .project-wrapper .descriptions .description-wrapper .title-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#showcase .project-wrapper .descriptions .description-wrapper .title-wrapper .title {
   text-transform: capitalize;
   font-weight: bold;
 }
 
-#showcase .project-wrapper .description-wrapper {
-  height: 35%;
-  padding: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-#showcase .project-wrapper .description-wrapper .read-more {
+#showcase .project-wrapper .descriptions .description-wrapper .read-more {
   text-decoration: none;
   text-transform: capitalize;
   color: #0c0728;
@@ -139,7 +141,6 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: 2rem 3rem;
   }
   #showcase .project-wrapper .left-side {
     width: 60vw;
@@ -149,27 +150,6 @@
   #showcase .project-wrapper .left-side img {
     min-height: 100%;
     width: auto;
-  }
-  #showcase .project-wrapper .right-side {
-    width: 40%;
-  }
-  #showcase .project-wrapper .right-side .title-wrapper {
-    height: 20%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 2rem 3rem;
-  }
-  #showcase .project-wrapper .right-side .description-wrapper {
-    height: 70%;
-    padding: 2rem 3rem;
   }
 }
 
