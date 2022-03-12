@@ -12,6 +12,24 @@ toggleBtn.addEventListener('click', function () {
     navbar.classList.toggle('show-nav')
 })
 
+// fixed header toggle
+const showAnim = gsap
+    .from(".sticky", {
+        yPercent: -100,
+        paused: true,
+        duration: 0.2
+    })
+    .progress(1);
+
+ScrollTrigger.create({
+    start: "top top",
+    end: 99999,
+    onUpdate: (self) => {
+        self.direction === -1 ? showAnim.play() : showAnim.reverse();
+    }
+});
+
+
 //ticker
 
 gsap.set('.ticker-wrapper', { xPercent: -50 })
@@ -51,10 +69,12 @@ const master = gsap.timeline()
 gsap.registerPlugin(ScrollTrigger);
 let tl = gsap.timeline({
     scrollTrigger: {
+        // scroller: ".home-container",
         trigger: ".landing-left",
         start: 'top 30%',
         end: "center 100px",
         markers: true,
+        invalidateOnRefresh: true,
         scrub: 3,
         toggleActions: "restart pause reverse pause"
     }
@@ -71,7 +91,43 @@ tl
         opacity: 0,
         duration: 3
     }, 0)
-    .to('#showcase', {
+    .fromTo('#showcase', {
+        y: 400,
+        // scale: 0,
+        opacity: 0
+    }, {
         y: 0,
-    })
+        // scale: 1,
+        opacity: 1,
+        duration: 2
+    }, 0.3)
 
+
+//SHOWCASE
+// ScrollTrigger.create({
+
+//     trigger: ".title-wrapper",
+//     pin: true,
+//     start: "top top",
+//     end: () => "+=" + (document.querySelector('.left-side').offsetHeight - document.querySelector('.title-wrapper').offsetHeight),
+//     markers: {
+//         startColor: "black",
+//         endColor: "cyan",
+//         fontSize: "22px"
+//     }
+
+// });
+
+// const shocaseTl = gsap.timeline({
+//     scrollTrigger: {
+//         // scroller: "#showcase",
+//         trigger: "#showcase",
+//         start: () => 'top top',
+//         end: "center 100px",
+//         markers: true,
+//         pin: true,
+//         scrub: true,
+//         invalidateOnRefresh: true,
+//         toggleActions: "restart pause reverse pause"
+//     }
+// })

@@ -3,9 +3,13 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba($color: #fff8f8, $alpha: 0.9);
+  background-color: color(primary);
   box-shadow: $box-shadow;
-  z-index: 1;
+  z-index: 10;
+  transition: ease 0.4s;
+  &--scrolled {
+    height: 40px;
+  }
 }
 
 //nav

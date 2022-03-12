@@ -279,10 +279,12 @@ img {
 // main
 
 main {
-  min-height: 100vh;
+  max-height: 100vh;
   font-family: $font-jost;
-
-  // .home-container {
-  //   height: 100vh;
-  // }
+  // overflow-y: scroll;
+  // scroll-snap-type: y mandatory;
 }
+// .panel {
+//   scroll-snap-align: start;
+//   height: 100vh;
+// }

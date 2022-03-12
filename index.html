@@ -4,25 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
-      type="text/javascript"
-    ></script> -->
     <link rel="icon" href="src/image/favicon.gif" type="image/gif" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Document</title>
+    <title>xPossibleStudio</title>
   </head>
   <body>
     <!-- preloader -->
     <div id="loader-wrapper">
-      <!-- <div class="preload">
-        <p class="x flip">x</p>
-        <p class="possible">possible</p>
-      </div> -->
-      <!-- <div id="loader"></div> -->
       <img src="src/image/loading.gif" alt="loading gif" />
-      <!-- <div class="loader-section section-left"></div>
-      <div class="loader-section section-right"></div> -->
     </div>
 
     <!-- navbar -->
@@ -39,36 +28,12 @@
             <li class="home"><a href="#">home</a></li>
             <li class="team"><a href="#">team</a></li>
             <li class="service"><a href="#">how it works</a></li>
-            <!-- <li class="questionare"><a href="#">questionare</a></li> -->
             <li class="contact"><a href="#">contact</a></li>
           </ul>
         </div>
       </nav>
 
       <!-- ticker -->
-      <!-- <div class="ticker-container">
-        <div class="ticker">
-          <div class="ticker-item">Branding ·</div>
-          <div class="ticker-item">UI / UX ·</div>
-          <div class="ticker-item">Strategy ·</div>
-          <div class="ticker-item">Web Development ·</div>
-          <div class="ticker-item">Marketing ·</div>
-          <div class="ticker-item">Artist’s agency ·</div>
-          <div class="ticker-item">
-            Branding · UI / UX · Strategy · Web Development · Marketing ·
-            Artist’s agency ·
-          </div>
-          <div class="ticker-item">
-            Branding · UI / UX · Strategy · Web Development · Marketing ·
-            Artist’s agency ·
-          </div>
-          <div class="ticker-item">
-            Branding · UI / UX · Strategy · Web Development · Marketing ·
-            Artist’s agency ·
-          </div>
-        </div>
-      </div> -->
-
       <div id="ticker" class="ticker-wrapper">
         <div class="boxes">
           <div class="box">
@@ -96,19 +61,25 @@
     </header>
 
     <main>
-      <div class="home-container">
-        <section id="home">
-          <div class="manifesto">
-            <h1>
-              <span class="landing-left">We release</span>
-              <span class="landing-right">innocent soul.</span>
-              <span class="landing-left">We design, polish, </span>
-              <span class="landing-right">and make it beautiful.</span>
-            </h1>
-          </div>
-        </section>
-        <section id="showcase">
-          <div class="project-wrapper">
+      <!-- landing -->
+      <section id="home">
+        <div class="manifesto panel">
+          <h1>
+            <span class="landing-left">We release</span>
+            <span class="landing-right">innocent soul.</span>
+            <span class="landing-left">We design, polish, </span>
+            <span class="landing-right">and make it beautiful.</span>
+          </h1>
+        </div>
+      </section>
+      <!-- showcase -->
+      <section id="showcase">
+        <div class="fixed-box">
+          <div class="title-box"></div>
+          <div class="grid-box"></div>
+        </div>
+        <div class="info-wrapper">
+          <div class="project-wrapper panel">
             <div class="pic left-side">
               <img
                 src="src/image/book-cover/nos-amours-radicales.jpg"
@@ -132,7 +103,7 @@
               </div>
             </div>
           </div>
-          <div class="project-wrapper">
+          <div class="project-wrapper panel">
             <div class="pic left-side">
               <img src="src/image/magazing/image ins1 .jpg" alt="" />
             </div>
@@ -153,7 +124,7 @@
               </div>
             </div>
           </div>
-          <div class="project-wrapper">
+          <div class="project-wrapper panel">
             <div class="pic left-side">
               <img
                 src="src/image/graphic chart/charte graphic_orange.jpg"
@@ -177,17 +148,20 @@
               </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
+      <!-- team -->
       <section id="team">
-        <div class="team-intro">We focus on our client's needs.</div>
-        <div class="team-intro">We challenge design rules and aesthetics.</div>
-        <div class="team-intro">
+        <div class="team-intro panel">We focus on our client's needs.</div>
+        <div class="team-intro panel">
+          We challenge design rules and aesthetics.
+        </div>
+        <div class="team-intro panel">
           We are a visionary team creates delightful and pragmatic things
           efficiently.
         </div>
-        <div class="profile">
+        <div class="profile panel">
           <div class="pic"></div>
           <h3 class="name">Ai Jian</h3>
           <p class="title">Creative Developer</p>
@@ -197,7 +171,7 @@
             visuals come to life and react on screen.
           </p>
         </div>
-        <div class="profile">
+        <div class="profile panel">
           <div class="pic"></div>
           <h3 class="name">Yuchen Yang</h3>
           <p class="title">Talented graphic designer</p>
