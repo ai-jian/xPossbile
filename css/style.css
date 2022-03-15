@@ -50,112 +50,152 @@
   }
 }
 
+#showcase {
+  padding-top: 130vh;
+}
+
 #showcase .project-wrapper {
+  position: relative;
+  top: 0;
+  min-height: 300vh;
   color: #0c0728;
-  min-height: -webkit-fit-content;
-  min-height: -moz-fit-content;
-  min-height: fit-content;
 }
 
-#showcase .project-wrapper .left-side {
-  height: 100vh;
-  width: auto;
-  background-color: #fab49f;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-#showcase .project-wrapper .left-side img {
-  margin: 1rem;
-}
-
-#showcase .project-wrapper .right-side {
-  width: 40%;
-  min-height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  border-left: 2px solid black;
-}
-
-#showcase .project-wrapper .right-side .title-box {
+#showcase .project-wrapper .block-grid {
+  display: none;
   position: -webkit-sticky;
   position: sticky;
   top: 0%;
-  background-color: rgba(249, 190, 190, 0.776);
-  border-bottom: 2px solid black;
-  height: 30vh;
-  z-index: 9;
+  height: 100vh;
+  width: 100vw;
 }
 
-#showcase .project-wrapper .descriptions {
-  min-height: 100%;
+#showcase .project-wrapper .block-grid .left-block {
+  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  width: 60%;
+  height: 100%;
+  border-right: 2px solid #0c0728;
+}
+
+#showcase .project-wrapper .block-grid .title-box {
+  background-color: rgba(255, 192, 203, 0.742);
+  border-bottom: 2px solid #0c0728;
   width: 40%;
-  right: 0%;
+  height: 30vh;
+  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0%;
-  position: absolute;
-}
-
-#showcase .project-wrapper .descriptions .description-wrapper {
-  height: 80vh;
-  background-color: aqua;
-  margin: 1rem;
-}
-
-#showcase .project-wrapper .descriptions .description-wrapper .title-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#showcase .project-wrapper .descriptions .description-wrapper .title-wrapper .title {
-  text-transform: capitalize;
-  font-weight: bold;
-}
-
-#showcase .project-wrapper .descriptions .description-wrapper .read-more {
-  text-decoration: none;
-  text-transform: capitalize;
-  color: #0c0728;
 }
 
 @media (min-width: 768px) {
-  #showcase .project-wrapper {
+  #showcase .project-wrapper .block-grid {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  #showcase .project-wrapper .left-side {
-    width: 60vw;
-    height: 100%;
-    border-right: 1px solid #0c0728;
+}
+
+#showcase .project-wrapper .pic {
+  position: absolute;
+  width: 100%;
+  height: 300vh;
+  top: 0%;
+  z-index: -1;
+}
+
+@media (min-width: 768px) {
+  #showcase .project-wrapper .pic {
+    width: 60%;
   }
-  #showcase .project-wrapper .left-side img {
-    min-height: 100%;
-    width: auto;
+}
+
+#showcase .project-wrapper .pic .project {
+  height: 70vh;
+  margin: 0 0 30vh 0;
+  background-position: 90%;
+  background-size: cover;
+}
+
+#showcase .project-wrapper .pic .one {
+  background-image: url(../src/image/book-cover/nos-amours-radicales.jpg);
+}
+
+#showcase .project-wrapper .pic .two {
+  background-image: url(../src/image/magazing/image-ins1.jpg);
+}
+
+#showcase .project-wrapper .pic .three {
+  background-image: url(../src/image/graphic-chart/charte-graphic_orange.jpg);
+}
+
+#showcase .project-wrapper .descriptions {
+  position: absolute;
+  top: 0;
+  padding-top: 100vh;
+  width: 100%;
+  height: 300vh;
+}
+
+#showcase .project-wrapper .descriptions .description-wrapper {
+  margin: 0 0 100vh 0;
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#showcase .project-wrapper .descriptions .description-wrapper .title-wrapper {
+  padding: 1rem;
+  text-transform: capitalize;
+  background-color: rgba(255, 192, 203, 0.742);
+}
+
+#showcase .project-wrapper .descriptions .description-wrapper .title-wrapper .title {
+  font-size: 1.5rem;
+}
+
+#showcase .project-wrapper .descriptions .description-wrapper .description {
+  padding: 1rem;
+}
+
+#showcase .project-wrapper .descriptions .description-wrapper .description .read-more {
+  display: block;
+  color: #0c0728;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.5rem 0;
+}
+
+@media (min-width: 768px) {
+  #showcase .project-wrapper .descriptions {
+    width: 40%;
+    right: 0;
+    padding-top: 30vh;
+  }
+  #showcase .project-wrapper .descriptions .description-wrapper {
+    margin: 0 0 74vh 0;
+    height: 70vh;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #showcase .project-wrapper .descriptions .description-wrapper .title-wrapper {
+    background-color: transparent;
   }
 }
 
 .sticky {
   position: fixed;
-  top: 0;
+  top: 0%;
   width: 100%;
   background-color: #fff8f8;
   -webkit-box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;

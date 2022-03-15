@@ -1,80 +1,120 @@
 #showcase {
+  padding-top: 130vh;
   .project-wrapper {
-    // transform: translateY(100vh);
+    position: relative;
+    top: 0;
+    min-height: 300vh;
     color: color(secondary);
-    min-height: fit-content;
-    .left-side {
+    .block-grid {
+      display: none;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0%;
       height: 100vh;
-      width: auto;
-      background-color: rgb(250, 180, 159);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      img {
-        margin: 1rem;
-      }
-    }
-    .right-side {
-      width: 40%;
-      min-height: 100%;
-      display: flex;
-      flex-direction: column;
-      border-left: 2px solid black;
-      .title-box {
+      width: 100vw;
+      .left-block {
+        position: relative;
         position: -webkit-sticky;
         position: sticky;
-        // position: absolute;
-        top: 0%;
-        background-color: rgba(249, 190, 190, 0.776);
-        border-bottom: 2px solid black;
+        width: 60%;
+        height: 100%;
+        border-right: 2px solid color(secondary);
+      }
+      .title-box {
+        background-color: rgba(255, 192, 203, 0.742);
+        border-bottom: 2px solid color(secondary);
+        width: 40%;
         height: 30vh;
-        z-index: 9;
+        position: relative;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0%;
+      }
+
+      @include tablet {
+        display: flex;
       }
     }
-    .descriptions {
-      min-height: 100%;
-      width: 40%;
-      right: 0%;
-      top: 0%;
+
+    .pic {
       position: absolute;
+      width: 100%;
+      height: 300vh;
+      top: 0%;
+      z-index: -1;
+
+      @include tablet {
+        width: 60%;
+      }
+
+      .project {
+        height: 70vh;
+        margin: 0 0 30vh 0;
+        background-position: 90%;
+        background-size: cover;
+      }
+      .one {
+        background-image: url(../src/image/book-cover/nos-amours-radicales.jpg);
+      }
+      .two {
+        background-image: url(../src/image/magazing/image-ins1.jpg);
+      }
+      .three {
+        background-image: url(../src/image/graphic-chart/charte-graphic_orange.jpg);
+      }
+    }
+
+    .descriptions {
+      // display: none;
+      position: absolute;
+      top: 0;
+      padding-top: 100vh;
+      width: 100%;
+      height: 300vh;
 
       .description-wrapper {
-        // position: absolute;
-        // top: 100vh;
-        height: 80vh;
-        background-color: aqua;
-        margin: 1rem;
+        margin: 0 0 100vh 0;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         .title-wrapper {
-          // height: 20%;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          // padding: $page-margin-tablet;
+          padding: $page-margin-mobile;
+          text-transform: capitalize;
+          background-color: rgba(255, 192, 203, 0.742);
           .title {
-            text-transform: capitalize;
-            font-weight: bold;
+            font-size: 1.5rem;
           }
         }
-        .read-more {
-          text-decoration: none;
-          text-transform: capitalize;
-          color: color(secondary);
+        .description {
+          padding: $page-margin-mobile;
+
+          .read-more {
+            display: block;
+            // text-align: right;
+            color: color(secondary);
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 0.5rem 0;
+          }
         }
       }
-    }
 
-    @include tablet {
-      display: flex;
-      // margin: $page-margin-tablet;
-      .left-side {
-        width: 60vw;
-        height: 100%;
-        border-right: 1px solid color(secondary);
+      //description
+      @include tablet {
+        width: 40%;
+        right: 0;
+        padding-top: 30vh;
 
-        img {
-          min-height: 100%;
-          width: auto;
+        .description-wrapper {
+          margin: 0 0 74vh 0;
+          height: 70vh;
+          justify-content: space-around;
+
+          .title-wrapper {
+            background-color: transparent;
+          }
         }
       }
     }

@@ -91,79 +91,30 @@ tl
         opacity: 0,
         duration: 3
     }, 0)
-gsap.from('#showcase',
-    {
-        scrollTrigger: {
-            trigger: "#showcase",
-            start: 'center bottom',
-            end: "bottom center",
-            markers: false,
-            invalidateOnRefresh: true,
-            scrub: 3,
-            toggleActions: "restart pause reverse pause"
-        },
-        y: 1300,
-        // scale: 0,
-        // opacity: 0.5,
 
-    }, {
-    y: 0,
-    // scale: 1,
-    // opacity: 1,
-    duration: 3,
-})
+//showcase
 
+gsap.to(".pic", {
+    yPercent: 0,
+    ease: "none",
+    scrollTrigger: {
+        trigger: ".project-wrapper",
+        start: "top center", // the default values
+        end: "center top",
+        scrub: true,
+    },
+});
 
-
-// gsap.fromTo('.title-box', {
-
-
-//     // y: 1000,
-//     // scale: 0,
-//     // opacity: 0
-// }, {
-//     scrollTrigger: {
-//         trigger: "#showcase",
-//         pin: true,
-//         start: "top top",
-//         // end: "300vh bottom",
-//         end: () => "+=" + (document.querySelector('.grid-box').offsetHeight - document.querySelector('.title-box').offsetHeight),
-//         markers: {
-//             startColor: "black",
-//             endColor: "cyan",
-//             fontSize: "22px"
-//         },
-//         markers: false
-//     },
-//     y: 0,
-//     scale: 1,
-//     opacity: 1,
-//     duration: 3
-// })
-
-// gsap.fromTo('.info-wrapper', {
-//     y: 100 + 'vh',
-//     // scale: 0,
-//     // opacity: 0
-// }, {
-//     y: 0,
-//     // scale: 1,
-//     // opacity: 1,
-//     duration: 3
-// })
+gsap.to(".descriptions", {
+    yPercent: -54,
+    ease: "none",
+    scrollTrigger: {
+        trigger: ".project-wrapper",
+        start: "top bottom", // the default values
+        end: "bottom top",
+        markers: true,
+        scrub: true,
+    },
+});
 
 
-//SHOWCASE
-// ScrollTrigger.create({
-
-//     trigger: ".title-box",
-//     pin: true,
-//     start: "top 30%",
-//     end: () => "+=" + (document.querySelector('.grid-box').offsetHeight - document.querySelector('.title-box').offsetHeight),
-//     markers: {
-//         startColor: "black",
-//         endColor: "cyan",
-//         fontSize: "22px"
-//     }
-
-// });	
