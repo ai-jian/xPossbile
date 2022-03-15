@@ -112,7 +112,7 @@ gsap.to(".descriptions", {
         trigger: ".project-wrapper",
         start: "top bottom", // the default values
         end: "bottom top",
-        markers: true,
+        // markers: true,
         scrub: true,
     },
 });
