@@ -105,6 +105,59 @@ gsap.to(".pic", {
     },
 });
 
+gsap.fromTo(".one", {
+    scale: 0.8,
+    opacity: 0.8
+
+}, {
+    scale: 1,
+    opacity: 1,
+    ease: "none",
+    scrollTrigger: {
+        trigger: ".one",
+        start: "center bottom", // the default values
+        end: "30% center",
+        scrub: true,
+        markers: true,
+    },
+    toggleActions: "play none none none"
+});
+gsap.fromTo(".two", {
+    scale: 0.8,
+    opacity: 0.8
+
+}, {
+    scale: 1,
+    opacity: 1,
+    ease: "none",
+    scrollTrigger: {
+        trigger: ".two",
+        start: "center bottom", // the default values
+        end: "30% center",
+        scrub: true,
+        markers: true,
+    },
+    toggleActions: "play none none none"
+});
+gsap.fromTo(".three", {
+    scale: 0.8,
+    opacity: 0.8
+
+}, {
+    scale: 1,
+    opacity: 1,
+    ease: "none",
+    scrollTrigger: {
+        trigger: ".three",
+        start: "center bottom", // the default values
+        end: "30% center",
+        scrub: true,
+        markers: true,
+    },
+    toggleActions: "play none none none"
+});
+
+
 gsap.to(".descriptions", {
     yPercent: -54,
     ease: "none",

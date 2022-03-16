@@ -108,6 +108,7 @@
 
 @media (min-width: 768px) {
   #showcase .project-wrapper .pic {
+    padding-top: 10vh;
     width: 60%;
   }
 }
