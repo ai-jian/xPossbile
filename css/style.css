@@ -499,13 +499,29 @@ nav .show-nav {
   left: -50vw;
 }
 
-#team .team-intro {
+#teams {
+  position: relative;
+  overflow: hidden;
+  color: #0c0728;
+}
+
+#teams .star {
+  min-height: 100vh;
+  width: 100vw;
+  color: #fbdbdc;
+  position: absolute;
+  top: -12%;
+  left: -120%;
+}
+
+#teams .star span {
+  font-size: 100rem;
+}
+
+#teams .team-intro {
   min-height: 100vh;
   min-width: 100%;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 4rem;
+  font-size: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -516,15 +532,17 @@ nav .show-nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: left;
-  background-color: #0c0728;
-  color: #fff8f8;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 1rem;
 }
 
-#team .profile {
+#teams .team-intro p {
+  z-index: 1;
+}
+
+#teams .profile {
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -542,7 +560,7 @@ nav .show-nav {
   padding: 1rem;
 }
 
-#team .profile .pic {
+#teams .profile .pic {
   margin: 2rem 0;
   height: 300px;
   width: 300px;

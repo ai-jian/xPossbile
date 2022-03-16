@@ -1,16 +1,32 @@
-#team {
+#teams {
+  position: relative;
+  overflow: hidden;
+  color: color(secondary);
+  .star {
+    min-height: 100vh;
+    width: 100vw;
+    color: color(primary-darken);
+    position: absolute;
+    top: -12%;
+    left: -120%;
+    span {
+      font-size: 100rem;
+    }
+  }
   .team-intro {
     min-height: 100vh;
     min-width: 100%;
-    width: fit-content;
-    font-size: 4rem;
+    font-size: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: left;
-    background-color: color(secondary);
-    color: color(primary);
+    align-items: flex-start;
+    // background-color: color(primary);
+    // background-color: aquamarine;
+    padding: $page-margin-mobile;
+    p {
+      z-index: 1;
+    }
   }
   .profile {
     min-height: 100vh;

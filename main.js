@@ -162,4 +162,45 @@ gsap.to(".descriptions", {
     },
 });
 
+//team
+
+gsap.fromTo(".team-intro", {
+    scale: 0.8,
+    opacity: 0.8
+
+}, {
+    scale: 1,
+    opacity: 1,
+    ease: "none",
+    scrollTrigger: {
+        trigger: ".team-intro",
+        start: "center bottom", // the default values
+        end: "30% center",
+        scrub: true,
+        // markers: true,
+    },
+    toggleActions: "play none none none"
+});
+
+gsap.fromTo(".star", {
+    scale: 0.8,
+    opacity: 0.8,
+    rotation: -20,
+    yPercent: -10,
+
+}, {
+    scale: 1,
+    opacity: 1,
+    rotation: 10,
+    yPercent: 0,
+    ease: "none",
+    scrollTrigger: {
+        trigger: ".star",
+        start: "top center", // the default values
+        end: "center center",
+        scrub: true,
+        // markers: true,
+    },
+    toggleActions: "play none none none"
+});
 
