@@ -94,17 +94,7 @@ tl
 
 //showcase
 
-gsap.to(".pic", {
-    yPercent: 0,
-    ease: "none",
-    scrollTrigger: {
-        trigger: ".project-wrapper",
-        start: "top center", // the default values
-        end: "center top",
-        scrub: true,
-    },
-});
-
+//pics
 gsap.fromTo(".one", {
     scale: 0.8,
     opacity: 0.8
@@ -118,7 +108,7 @@ gsap.fromTo(".one", {
         start: "center bottom", // the default values
         end: "30% center",
         scrub: true,
-        markers: true,
+        // markers: true,
     },
     toggleActions: "play none none none"
 });
@@ -135,7 +125,7 @@ gsap.fromTo(".two", {
         start: "center bottom", // the default values
         end: "30% center",
         scrub: true,
-        markers: true,
+        // markers: true,
     },
     toggleActions: "play none none none"
 });
@@ -152,11 +142,13 @@ gsap.fromTo(".three", {
         start: "center bottom", // the default values
         end: "30% center",
         scrub: true,
-        markers: true,
+        // markers: true,
     },
     toggleActions: "play none none none"
 });
 
+
+//description
 
 gsap.to(".descriptions", {
     yPercent: -54,
