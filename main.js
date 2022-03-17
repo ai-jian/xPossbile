@@ -67,7 +67,7 @@ const master = gsap.timeline()
 
 //landing
 gsap.registerPlugin(ScrollTrigger);
-let tl = gsap.timeline({
+const tl = gsap.timeline({
     scrollTrigger: {
         // scroller: ".home-container",
         trigger: ".landing-left",
@@ -110,7 +110,7 @@ gsap.fromTo(".one", {
         scrub: true,
         // markers: true,
     },
-    toggleActions: "play none none none"
+    // toggleActions: "play none none none"
 });
 gsap.fromTo(".two", {
     scale: 0.8,
@@ -127,7 +127,7 @@ gsap.fromTo(".two", {
         scrub: true,
         // markers: true,
     },
-    toggleActions: "play none none none"
+    // toggleActions: "play none none none"
 });
 gsap.fromTo(".three", {
     scale: 0.8,
@@ -144,7 +144,7 @@ gsap.fromTo(".three", {
         scrub: true,
         // markers: true,
     },
-    toggleActions: "play none none none"
+    // toggleActions: "play none none none"
 });
 
 
@@ -164,43 +164,54 @@ gsap.to(".descriptions", {
 
 //team
 
-gsap.fromTo(".team-intro", {
-    scale: 0.8,
-    opacity: 0.8
-
-}, {
-    scale: 1,
-    opacity: 1,
-    ease: "none",
+const t1 = gsap.timeline({
     scrollTrigger: {
-        trigger: ".team-intro",
+        trigger: ".t1",
         start: "center bottom", // the default values
         end: "30% center",
         scrub: true,
         // markers: true,
+        toggleActions: "restart pause reverse pause"
+
     },
-    toggleActions: "play none none none"
-});
 
-gsap.fromTo(".star", {
-    scale: 0.8,
-    opacity: 0.8,
-    rotation: -20,
-    yPercent: -10,
+})
+    .fromTo(".t1", {
+        scale: 0.8,
+        opacity: 0.8
 
-}, {
-    scale: 1,
-    opacity: 1,
-    rotation: 10,
-    yPercent: 0,
+    }, {
+        scale: 1,
+        opacity: 1,
+    })
+
+
+// rotating star
+gsap.set(".star", {
+    transformOrigin: 'center'
+})
+const scrollStar = gsap.timeline({
     ease: "none",
     scrollTrigger: {
         trigger: ".star",
-        start: "top center", // the default values
-        end: "center center",
-        scrub: true,
+        pin: true,
+
+        // start: "top center", // the default values
+        // end: "bottom center",
+        start: "-150% top", // gets called on each refresh
+        end: '+=350%',
+        scrub: 1,
         // markers: true,
+        toggleActions: "restart pause reverse pause"
     },
-    toggleActions: "play none none none"
-});
+
+})
+    .fromTo(".star", {
+        rotation: 0,
+        yPercent: -120,
+    }, {
+        rotation: 360,
+        yPercent: -120,
+
+    });
 
