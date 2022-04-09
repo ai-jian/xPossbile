@@ -1,4 +1,4 @@
 # xPossbile Studio
  
-[See Live](https://xpossiblestudio.com)
-xpossiblestudio.com
+[xpossiblestudio.com](https://xpossiblestudio.com)
+
